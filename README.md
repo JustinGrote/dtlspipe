@@ -33,7 +33,7 @@ Let's assume you have following setup: you have server with public IP address 20
 1. Generate pre-shared key with command `dtlspipe genpsk`
 2. Run dtlspipe-server on server machine: `dtlspipe -psk xxxxxxxxxxxx server 0.0.0.0:2815 127.0.0.1:514`
 3. Run dtlspipe-client on your machine: `dtlspipe -psk xxxxxxxxxxxx client 127.0.0.1:2816 203.0.113.11:2815`
-4. Use address `127.0.0.1:2816` instead of `203.0.113.11:514` for communication with the service.
+4. Use address `127.0.0.1:2816` instead of `203.0.113.11:514` for communication with the service. Until you initiate "interesting" traffic to the port, the connection setup will not initiate, so be sure to send traffic to the local port during testing/validation.
 
 Few notes:
 
